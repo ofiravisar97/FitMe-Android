@@ -1,0 +1,109 @@
+* { padding: 0;
+    margin: 0;
+    box-sizing: border-box;}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fefefe;
+}
+
+#header {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 7.5rem;
+    background-color: #6AE86A;
+    padding: 8px;
+    box-shadow: 1px 1px 15px black;
+    z-index: 1;
+}
+
+#menu-btn{
+    display: block;
+    position: absolute;
+    right: 2rem;
+    padding: 8px;
+    height: 3.5rem;
+    width: 3%;
+    background-image: url(../icons/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    top: 2rem;
+    transition: background,2s,ease-in-out,transform,1s,ease-in-out;
+}
+
+
+
+#menu-cont{
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #417F53;
+    width: 0%;
+    height: 100vh;
+}
+
+#menu-list{
+list-style: none;
+text-align: center;
+display: block;
+position: relative;
+font-size: 30px;
+color: white;
+font-weight: 700;
+}
+
+.menu-item{
+    padding: 45px;
+    transition: opacity 300ms ease-in-out,background 300ms ease-in-out
+}
+
+.menu-item:hover{
+    opacity: 0.9;
+    background-color: #67CC84;
+}
+
+#home{
+    background: #67cc84;
+    
+}
+
+#home-img {
+    width: 5rem;
+    height: 5rem;
+    margin: 0 auto;
+    background-image: url(../icons/home.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+
+/*
+*****************
+MENU BTN HOVERING ----------------
+******************
+*/
+#menu-btn::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; right:0; bottom: 0;
+    background-image: url(../icons/menu-black.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-size: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+#menu-btn:hover::before {
+    opacity: 1;
+}
+
+
+
